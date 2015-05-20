@@ -10,6 +10,6 @@ ADD pom.xml /tmp/src/
 RUN mvn verify clean --fail-never
 ADD . /usr/src/app
 RUN mvn verify
-RUN cp target/wildfly-helloworld.war /opt/jboss/wildfly/standalone/deployments/ && rm -rf /tmp/src
 USER jboss
+RUN cp target/wildfly-helloworld.war /opt/jboss/wildfly/standalone/deployments/ && rm -rf /tmp/src
 EXPOSE 8080
