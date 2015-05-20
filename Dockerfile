@@ -11,5 +11,5 @@ RUN mvn verify clean --fail-never
 ADD . /usr/src/app
 RUN mvn verify
 USER jboss
-RUN cp target/wildfly-helloworld.war /opt/jboss/wildfly/standalone/deployments/ && rm -rf /tmp/src
+RUN cp target/wildfly-helloworld.war /opt/jboss/wildfly/standalone/deployments/
 EXPOSE 8080
